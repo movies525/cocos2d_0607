@@ -6,15 +6,16 @@ var apo01Layer = cc.Layer.extend({
 
         var colorLayer = new cc.LayerColor(
             cc.color(255,255,0),
-            320,96
+            209,55
         );
         colorLayer.x = size.width/2;
         colorLayer.y = size.height/2;
         colorLayer.ignoreAnchorPointForPosition(false);
         this.addChild(colorLayer);
 
-        var mylabel = new cc.LabelTTF("My Game","Arial",48,
-        cc.size(320,96),cc.TEXT_ALIGNMENT_CENTER,cc.VERTICAL_TEXT_ALIGNMENT_CENTER);
+        var mylabel = new cc.LabelTTF("My Game","Arial",48);
+        var labelSize = mylabel.getContentSize();
+        cc.log(labelSize.width + 'x'+labelSize.height);
         mylabel.x = size.width/2;
         mylabel.y = size.height/2;
         mylabel.setColor(cc.color(0,13,255));
